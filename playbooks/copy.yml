@@ -1,0 +1,13 @@
+---
+- name: copying files from local to remote
+  hosts: all
+
+  tasks:
+  - name: copying files
+    become: true
+    copy:
+     src: /root/files/if.txt
+     dest: /tmp
+     owner: root
+     group: root
+     mode: 0644

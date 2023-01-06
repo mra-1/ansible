@@ -1,0 +1,15 @@
+---
+- name:
+  hosts: all
+
+  tasks:
+  - name: schedule cron
+    cron:
+     name: this is a scheduled job by ansible
+     minute: "1"
+     hour: "3"
+     day: "*"
+     month: "*"
+     weekday: "*"
+     user: root
+     job: "/root/cfile.sh"

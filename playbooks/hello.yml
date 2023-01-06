@@ -1,0 +1,7 @@
+---
+- name: my first hello world
+  hosts: localhost
+
+  tasks:
+  - name: print hello
+    debug: msg="hi you fuckers"

@@ -1,0 +1,9 @@
+---
+- name: change file permissions
+  hosts: all
+
+  tasks:
+  - name: files permissions
+    file:
+      path: /tmp/if.txt
+      mode: a+w
