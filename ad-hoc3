@@ -1,0 +1,22 @@
+creating a user on remote clients
+
+ansible all -m user -a "name=moaz home=/home/moaz shell=/bin/bash state=present"
+
+add users to a differnt group
+
+ansible all -m user -a "name=moaz group=master"
+
+deleting a user on remote client
+
+ansible all -m user -a "name=moaz home=/home/moaz shell=/bin/bash state=absent"
+or
+ansible all -m shell -a "userdel moaz"
+
+getting system info from remote client 
+
+ansible all -m setup
+
+run command on remote client
+
+ansible "clientname" -a "/sbin/reboot"
+
