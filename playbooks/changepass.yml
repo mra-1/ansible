@@ -8,3 +8,7 @@
      name: fucktheirs
      update_password: always
      password: "{{ newpassword|password_hash('sha512') }}"
+
+# to specify variable you will runn this command and give variable name after --extra-vars
+# then variable=value
+# ansible-playbook "playbook-name" --extra-vars newpassword="newpassword"
