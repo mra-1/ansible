@@ -1,0 +1,12 @@
+yum : states 
+present - install
+absent: uninstall
+latest: upgrade
+
+service : states
+started 
+stopped
+reloaded
+restarted
+
+
