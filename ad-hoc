@@ -1,0 +1,19 @@
+ad-hoc runs on need basis 
+
+ad-hoc syntax
+
+ansible [target] -m [module] -a "[module options]"
+
+example
+ping localhost = ansible localhost -m ping
+
+creating a file on all remote clients = 
+ansible all -m file -a "path=/home/iafzal/adhoc1 state=touch mode=700"
+
+deleting a file on all remote clients =
+ansible all -m file -a "path=/home/iafzal/adhoc1 state-absent"
+
+copying a file to a remote client = 
+ansible all -m copy -a "src=/root/ansible/state dest=/root/state"
+
+

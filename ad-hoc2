@@ -1,0 +1,23 @@
+installing packages
+
+ansible all -m yum -a "name=telnet state=present"
+ansible all -m yum -a "name=httpd-manual state=present"
+
+starting httpd
+
+ansible all -m service -a "name=httpd state=started"
+
+starts httpd and enable on boot up
+
+ansible all -m service -a "name=httpd state=started enabled=yes"
+
+checking status of httpd
+
+ansible all -m shell -a  "systemctl status httpd"
+
+remove httpd package
+
+ansible all -m yum -a "name=httpd state=absent"
+or
+ansible all -m shell -a "yum remove httpd"
+
